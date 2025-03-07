@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <img class="box-aspect object-cover" src="${value.thumbnail || 'thumbnail1.jpg'}" alt="Video Thumbnail">
                     <p class="text-sm text-center p-4 text-white">${value.name || 'No description available.'}</p>`;
                 listItem.addEventListener("click", () => {
-                    alert("clicked");
+                 
                     video_player_true.src = `/video/${value.id}`;
                 });
                 video_list.appendChild(listItem);

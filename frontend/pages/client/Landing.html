@@ -19,38 +19,45 @@
 
 <body>
 
-    <header id="navbar" class="fixed w-full z-4 h-[100px] header-container p-3">
+    <header id="navbar" class="fixed w-full z-4 h-[100px] header-container">
 
 
-        <nav class=" flex justify-between items-center py-4">
+        
 
-            <div>
-                <img class="w-[100px]" src="/static/images/witty.png" alt="">
-            </div>
-            <ul class="hidden md:flex gap-4 text-white">
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-                <li>
-                    <a href="#videos">Video Gallery</a>
-                </li>
-                <li>
-                    <a href="#events">Upcoming Events</a>
-                </li>
-                <li>
-                    <a href="#pictures">Picture Gallery</a>
-                </li>
-
-            </ul>
-            <button id="menuButton" class="md:hidden text-white">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-              </svg>
-          </button>
-        </nav>
+<nav class="">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="/static/images/witty.png" class="h-8" alt="Flowbite Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Witty Foods</span>
+      </a>
+      <button id="menuButton" data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-solid-bg" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+        <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+          <li>
+            <a href="#" class="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
     </header>
       <!-- Side Navigation Menu -->
-      <div id="sideNav" class="fixed top-0 left-0 h-full w-64 bg-gray-800 text-white transform -translate-x-full transition-transform duration-300 z-50">
+      <div id="sideNav" class="fixed top-0 left-0 h-full md:block w-64 bg-gray-800 text-white transform -translate-x-full transition-transform duration-300 z-50">
         <button id="closeButton" class="absolute top-4 right-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -81,13 +88,13 @@
         <!-- Content -->
         <div class="relative z-10 flex flex-col items-center justify-center text-center h-full text-white px-4">
           <h1 class="text-4xl sm:text-6xl font-bold leading-tight">
-            Welcome to Zikos Website
+            Welcome to Witty Foods
           </h1>
           <p class="mt-4 text-lg sm:text-xl max-w-xl">
             Experience the finest dining with our chef-crafted menu, featuring
             fresh and locally sourced ingredients.
           </p>
-          <div class="mt-6 space-x-4">
+          <div class="mt-6 space-x-4 flex flex-col gap-5 md:flex-row">
             <a
               href="#menu"
               class="px-6 py-3 bg-red-600 hover:bg-red-700 rounded-lg text-white font-medium text-lg"
@@ -119,12 +126,12 @@
                 src="/videos/EP.124.v0.360p.mp4"
             ></video>
         </div>
-        <div id="video-list" class="h-full w-full list-view-container">
+        <div id="video-list" class="h-screen pb-28 w-full list-view-container p-4">
             <!-- Add your video list here -->
         </div>
     </section>
     
-    <section id="events_loading" class="py-16 hidden">
+    <section id="events_loading" class="py-16  hidden bg-black h-full w-full ">
       <p class="section-subtitle text-center text-3xl font-bold">Upcoming Events</p>
       <div class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 ">
 
@@ -448,8 +455,11 @@
 
 
   </section>
+  <div class="pt-20">
+
+  </div>
     <section id="events-section" class="py-16">
-        <p class="section-subtitle text-center text-3xl font-bold">Upcoming Events</p>
+        <p class="section-subtitle text-center text-3xl font-bold pb-16">Upcoming Events</p>
         <div id="events" class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 ">  
         </div>
     </section>
@@ -480,6 +490,55 @@
 
     </section>
 
+    <section class=" py-12">
+        <div class="max-w-6xl mx-auto px-6 lg:px-12">
+          <h2 class="text-3xl section-subtitle font-bold text-center mb-6">Get in Touch</h2>
+      
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Contact Info -->
+            <div>
+              <h3 class="text-xl font-semibold text-gray-100">Contact Details</h3>
+              <p class="text-gray-200 mt-2">Reach out to us for reservations, inquiries, or feedback!</p>
+      
+              <div class="mt-4 space-y-3 text-gray-200">
+                <p class="flex items-center"><span class="font-semibold">📍 Location:</span> 123 Food Street, Lusaka, Zambia</p>
+                <p class="flex items-center"><span class="font-semibold">📞 Phone:</span> <a href="tel:+260900000000" class="text-blue-600 hover:underline">+260 900 000 000</a></p>
+                <p class="flex items-center"><span class="font-semibold">📧 Email:</span> <a href="mailto:info@foodwebsite.com" class="text-blue-600 hover:underline">info@foodwebsite.com</a></p>
+                <p class="flex items-center"><span class="font-semibold">🕒 Hours:</span> Mon-Sat: 9 AM - 10 PM, Sun: 10 AM - 8 PM</p>
+              </div>
+      
+              <!-- Social Links -->
+              <div class="mt-6 flex space-x-4">
+                <a href="#" class="text-blue-500 hover:text-blue-700">🌍 Website</a>
+                <a href="#" class="text-blue-500 hover:text-blue-700">📷 Instagram</a>
+                <a href="#" class="text-blue-500 hover:text-blue-700">📘 Facebook</a>
+              </div>
+            </div>
+      
+            <!-- Contact Form -->
+            <div class="bg-slate-800 p-6 rounded-lg shadow-lg text-white">
+              <h3 class="text-xl font-semibold   mb-4">Send Us a Message</h3>
+              <form>
+                <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-lg mb-4">
+                <input type="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded-lg mb-4">
+                <textarea placeholder="Your Message" rows="4" class="w-full p-3 border border-gray-300 rounded-lg mb-4"></textarea>
+                <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">Send Message</button>
+              </form>
+            </div>
+          </div>
+      
+          <!-- Google Map -->
+          <div class="mt-8">
+            <iframe 
+              class="w-full h-64 rounded-lg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509514!2d144.953735315922!3d-37.81627937975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5778f9b0e6c582!2sRestaurant!5e0!3m2!1sen!2sus!4v1634194792997!5m2!1sen!2sus"
+              allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </section>
+      
+
       <!-- 
     - #FOOTER
   -->
@@ -488,55 +547,35 @@
     - #FOOTER
   -->
 
-  <footer class="footer-section">
-    <h2 class="text-white text-center text-3xl font-bold py-4">Get In Touch</h2>
-    
-    <div class="footer-grid">
-        <!-- Contact Details -->
-        <div class="footer-grid-item">
-            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#FFFFFF">
-                <path d="M796-120q-119 0-240-55.5T333-333Q231-435 175.5-556T120-796q0-18.86 12.57-31.43T164-840h147.33q14 0 24.34 9.83Q346-820.33 349.33-806l26.62 130.43q2.05 14.9-.62 26.24-2.66 11.33-10.82 19.48L265.67-530q24 41.67 52.5 78.5T381-381.33q35 35.66 73.67 65.5Q493.33-286 536-262.67l94.67-96.66q9.66-10.34 23.26-14.5 13.61-4.17 26.74-2.17L806-349.33q14.67 4 24.33 15.53Q840-322.27 840-308v144q0 18.86-12.57 31.43T796-120ZM233-592l76-76.67-21-104.66H187q3 41.66 13.67 86Q211.33-643 233-592Zm365.33 361.33q40.34 18.34 85.84 29.67 45.5 11.33 89.16 13.67V-288l-100-20.33-75 77.66ZM233-592Zm365.33 361.33Z" />
-            </svg>
-            <a href="tel:+260957657513">0957657513</a>
-        </div>
-        <!-- Email -->
-        <div class="footer-grid-item">
-            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#FFFFFF">
-                <path d="M146.67-160q-27 0-46.84-19.83Q80-199.67 80-226.67v-506.66q0-27 19.83-46.84Q119.67-800 146.67-800h666.66q27 0 46.84 19.83Q880-760.33 880-733.33v506.66q0 27-19.83 46.84Q840.33-160 813.33-160H146.67ZM480-454.67 146.67-670v443.33h666.66V-670L480-454.67Zm0-66.66 330.67-212H150l330 212ZM146.67-670v-63.33V-226.67-670Z" />
-            </svg>
-            <a href="mailto:booking@grilli.com">booking@grilli.com</a>
-        </div>
-        <!-- Location -->
-        <div class="footer-grid-item">
-            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#FFFFFF">
-                <path d="M480.06-486.67q30.27 0 51.77-21.56 21.5-21.55 21.5-51.83 0-30.27-21.56-51.77-21.55-21.5-51.83-21.5-30.27 0-51.77 21.56-21.5 21.55-21.5 51.83 0 30.27 21.56 51.77 21.55 21.5 51.83 21.5ZM480-168q129.33-118 191.33-214.17 62-96.16 62-169.83 0-114.86-73.36-188.1-73.36-73.23-179.97-73.23T300.03-740.1q-73.36 73.24-73.36 188.1 0 73.67 63 169.83Q352.67-286 480-168Zm0 88Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
-            </svg>
-            <a href="#">Lusaka, Zambia</a>
-        </div>
-        <!-- WhatsApp -->
-        <div class="footer-grid-item">
-            <a href="https://wa.me/+260957657513">0957657513</a>
-        </div>
-    </div>
+  
 
-    <!-- Quick Links Section -->
-    <div class="other-footer-grid">
-        <div class="p-16">
-            <h3 class="text-2xl pb-4">Quick Links</h3>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#videos">Videos</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#pictures">Pictures</a></li>
+<footer class="bg-white rounded-lg shadow-sm dark:bg-gray-900 ">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                <img src="/static/images/witty.png" class="h-8" alt="Witty Foods Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Witty Foods</span>
+            </a>
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">About</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline">Contact</a>
+                </li>
             </ul>
         </div>
-    </div>
-
-    <!-- Copyright -->
-    <div class="text-center text-gray-400 text-sm mt-8">
-        &copy; 2024 Zikos Restaurant. All rights reserved.
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#" class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
     </div>
 </footer>
+
 
 </article>
 </main>
@@ -554,13 +593,13 @@
   });
 </script>
   <script src="/static/js/script.js"></script>
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "pd923qg6l8");
-</script>
+</script> -->
 
 </body>
 
