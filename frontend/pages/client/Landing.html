@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to Zikos Restaurant, where fine dining meets fresh, locally sourced ingredients. Explore our menu, book reservations, and enjoy our signature dishes in Lusaka, Zambia.">
+  <meta name="keywords" content="Zikos Restaurant, fine dining, Lusaka restaurants, fresh ingredients, signature dishes">
+  <meta property="og:title" content="Zikos Restaurant - Fine Dining in Lusaka">
+  <meta property="og:description" content="Discover the taste of Zikos Restaurant with our locally sourced ingredients and chef-crafted menu.">
+  <meta property="og:image" content="/static/images/hero-slider-1.jpg">
+  <meta property="og:url" content="https://www.zikosrestaurant.com">
+  <meta property="og:type" content="website">
+  <title>Zikos Restaurant - Experience Fine Dining in Lusaka</title>
+  <link rel="stylesheet" href="/static/css/landing_page.css">
+  <script src="/static/js/tailwind.config.js"></script>
+  <script type="module" src="/static/js/landing_page.js"></script>
+</head>
+
+<body>
+
+    <header id="navbar" class="fixed w-full z-4 h-[100px] header-container">
+
+
+        
+
+<nav class="">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="/static/images/witty.png" class="h-8" alt="Flowbite Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Witty Foods</span>
+      </a>
+      <button id="menuButton" data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-solid-bg" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+        <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+          <li>
+            <a href="#" class="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    </header>
+      <!-- Side Navigation Menu -->
+      <div id="sideNav" class="fixed top-0 left-0 h-full md:block w-64 bg-gray-800 text-white transform -translate-x-full transition-transform duration-300 z-50">
+        <button id="closeButton" class="absolute top-4 right-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <ul class="mt-16 space-y-4">
+            <!-- Add your navigation items here -->
+            <li><a href="#home" class="block px-4 py-2">Home</a></li>
+            <li><a href="#menu" class="block px-4 py-2">Menu</a></li>
+            <li><a href="#reservations" class="block px-4 py-2">Reservations</a></li>
+            <li><a href="#contact" class="block px-4 py-2">Contact</a></li>
+        </ul>
+    </div>
+    <main>
+      <article>
+    <section id="home" class="hero h-screen relative bg-black">
+        <!-- Hero Image -->
+        <img
+          id="slider"
+          class="absolute inset-0 object-cover w-full h-full fade-image"
+          src="/static/images/hero-slider-1.jpg"
+          alt="Delicious Food"
+        />
+      
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      
+        <!-- Content -->
+        <div class="relative z-10 flex flex-col items-center justify-center text-center h-full text-white px-4">
+          <h1 class="text-4xl sm:text-6xl font-bold leading-tight">
+            Welcome to Witty Foods
+          </h1>
+          <p class="mt-4 text-lg sm:text-xl max-w-xl">
+            Experience the finest dining with our chef-crafted menu, featuring
+            fresh and locally sourced ingredients.
+          </p>
+          <div class="mt-6 space-x-4 flex flex-col gap-5 md:flex-row">
+            <a
+              href="#menu"
+              class="px-6 py-3 bg-red-600 hover:bg-red-700 rounded-lg text-white font-medium text-lg"
+            >
+              Explore Menu
+            </a>
+            <a
+              href="#reservation"
+              class="px-6 py-3 bg-white text-red-600 hover:bg-gray-200 rounded-lg font-medium text-lg"
+            >
+              Make a Reservation
+            </a>
+          </div>
+        </div>
+      </section>
+      
+
+
+
+
+
+
+      <section id="videos" class="py-16 grid grid-container h-screen">
+        <div class="video-player-container h-full w-full">
+            <video
+                id="videoplayer"
+                class="h-full w-full"
+                controls
+                src="/videos/EP.124.v0.360p.mp4"
+            ></video>
+        </div>
+        <div id="video-list" class="h-screen pb-28 w-full list-view-container p-4">
+            <!-- Add your video list here -->
+        </div>
+    </section>
+    
+    <section id="events_loading" class="py-16  hidden bg-black h-full w-full ">
+      <p class="section-subtitle text-center text-3xl font-bold">Upcoming Events</p>
+      <div class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 ">
+
+           <div class=" event-list-item ">
+
+              <span class="flex flex-row gap-3 text-white event-title">
+                  <div class="h-8 w-8 rounded-full bg-white animate-pulse">
+
+                  </div>
+                
+
+                  <div class="mt-2 text-2xl event-title font-bold bg-white h-4 w-[80%] rounded-full animate-pulse">
+                  
+                  </div>
+
+
+
+
+              </span>
+
+
+              <!--Loading-->
+              <div class="p-2 gap-3 flex flex-col text-white h-full animate-pulse ">
+                  <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                  </p>
+                  <p class="text-lg ml-4">
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+
+                  </p>
+
+              </div>
+
+          </div>
+          <div class=" event-list-item ">
+
+              <span class="flex flex-row gap-3 text-white event-title">
+                  <div class="h-8 w-8 rounded-full bg-white animate-pulse">
+
+                  </div>
+                
+
+                  <div class="mt-2 text-2xl event-title font-bold bg-white h-4 w-[80%] rounded-full animate-pulse">
+                  
+                  </div>
+
+
+
+
+              </span>
+
+
+              <!--Loading-->
+              <div class="p-2 gap-3 flex flex-col text-white h-full animate-pulse ">
+                  <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                  </p>
+                  <p class="text-lg ml-4">
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+
+                  </p>
+
+              </div>
+
+          </div>
+          <div class=" event-list-item ">
+
+              <span class="flex flex-row gap-3 text-white event-title">
+                  <div class="h-8 w-8 rounded-full bg-white animate-pulse">
+
+                  </div>
+                
+
+                  <div class="mt-2 text-2xl event-title font-bold bg-white h-4 w-[80%] rounded-full animate-pulse">
+                  
+                  </div>
+
+
+
+
+              </span>
+
+
+              <!--Loading-->
+              <div class="p-2 gap-3 flex flex-col text-white h-full animate-pulse ">
+                  <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                  </p>
+                  <p class="text-lg ml-4">
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+
+                  </p>
+
+              </div>
+
+          </div>
+          <div class=" event-list-item ">
+
+              <span class="flex flex-row gap-3 text-white event-title">
+                  <div class="h-8 w-8 rounded-full bg-white animate-pulse">
+
+                  </div>
+                
+
+                  <div class="mt-2 text-2xl event-title font-bold bg-white h-4 w-[80%] rounded-full animate-pulse">
+                  
+                  </div>
+
+
+
+
+              </span>
+
+
+              <!--Loading-->
+              <div class="p-2 gap-3 flex flex-col text-white h-full animate-pulse ">
+                  <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                  </p>
+                  <p class="text-lg ml-4">
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+
+                  </p>
+
+              </div>
+
+          </div>
+          <div class=" event-list-item ">
+
+              <span class="flex flex-row gap-3 text-white event-title">
+                  <div class="h-8 w-8 rounded-full bg-white animate-pulse">
+
+                  </div>
+                
+
+                  <div class="mt-2 text-2xl event-title font-bold bg-white h-4 w-[80%] rounded-full animate-pulse">
+                  
+                  </div>
+
+
+
+
+              </span>
+
+
+              <!--Loading-->
+              <div class="p-2 gap-3 flex flex-col text-white h-full animate-pulse ">
+                  <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                  </p>
+                  <p class="text-lg ml-4">
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+
+                  </p>
+
+              </div>
+
+          </div>
+          <div class=" event-list-item ">
+
+              <span class="flex flex-row gap-3 text-white event-title">
+                  <div class="h-8 w-8 rounded-full bg-white animate-pulse">
+
+                  </div>
+                
+
+                  <div class="mt-2 text-2xl event-title font-bold bg-white h-4 w-[80%] rounded-full animate-pulse">
+                  
+                  </div>
+
+
+
+
+              </span>
+
+
+              <!--Loading-->
+              <div class="p-2 gap-3 flex flex-col text-white h-full animate-pulse ">
+                  <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                  </p>
+                  <p class="text-lg ml-4">
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+
+                  </p>
+
+              </div>
+
+          </div>
+          <div class=" event-list-item animate-pulse">
+
+              <span class="flex flex-row gap-3 text-white event-title">
+                  <div class="h-8 w-8 rounded-full bg-white animate-pulse">
+
+                  </div>
+                
+
+                  <div class="mt-2 text-2xl event-title font-bold bg-white h-4 w-[80%] rounded-full animate-pulse">
+                  
+                  </div>
+
+
+
+
+              </span>
+
+
+              <!--Loading-->
+              <div class="p-2 gap-3 flex flex-col text-white h-full animate-pulse ">
+                  <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                  </p>
+                  <p class="text-lg ml-4">
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+
+                  </p>
+
+              </div>
+
+          </div>
+          <div class=" event-list-item ">
+
+              <span class="flex flex-row gap-3 text-white event-title">
+                  <div class="h-8 w-8 rounded-full bg-white animate-pulse">
+
+                  </div>
+                
+
+                  <div class="mt-2 text-2xl event-title font-bold bg-white h-4 w-[80%] rounded-full animate-pulse">
+                  
+                  </div>
+
+
+
+
+              </span>
+
+
+              <!--Loading-->
+              <div class="p-2 gap-3 flex flex-col text-white h-full animate-pulse ">
+                  <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                  </p>
+                  <p class="text-lg ml-4">
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+                      <p class="mt-2 text-2xl event-title font-bold bg-white h-2 w-[80%] rounded-full animate-pulse">
+                     
+                      </p>
+
+                  </p>
+
+              </div>
+
+          </div>
+
+
+
+      </div>
+
+
+
+  </section>
+  <div class="pt-20">
+
+  </div>
+    <section id="events-section" class="py-16">
+        <p class="section-subtitle text-center text-3xl font-bold pb-16">Upcoming Events</p>
+        <div id="events" class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 ">  
+        </div>
+    </section>
+
+
+    <section id="pictures_loading" class="py-16 hidden">
+      <p class="section-subtitle text-center text-3xl font-bold">Our Signature Dishes</p>
+
+      <div class="picture-grid grid-cols-3 grid">
+
+          <div class="pic-span-2 animate-pulse hover:shadow-md bg-white"></div>
+          <div class="bg-white animate-pulse"></div>
+          <div class="bg-white animate-pulse"></div>
+
+          <div class="bg-white animate-pulse"></div>
+          <div class="bg-white animate-pulse"></div>
+
+      </div>
+
+  </section>
+    <section id="pictures" class="py-16">
+        <p class="section-subtitle text-center text-3xl font-bold">Our Signature Dishes</p>
+
+        <div id="pictureGrid" class="picture-grid">
+
+          
+        </div>
+
+    </section>
+
+    <section class=" py-12">
+        <div class="max-w-6xl mx-auto px-6 lg:px-12">
+          <h2 class="text-3xl section-subtitle font-bold text-center mb-6">Get in Touch</h2>
+      
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Contact Info -->
+            <div>
+              <h3 class="text-xl font-semibold text-gray-100">Contact Details</h3>
+              <p class="text-gray-200 mt-2">Reach out to us for reservations, inquiries, or feedback!</p>
+      
+              <div class="mt-4 space-y-3 text-gray-200">
+                <p class="flex items-center"><span class="font-semibold">📍 Location:</span> 123 Food Street, Lusaka, Zambia</p>
+                <p class="flex items-center"><span class="font-semibold">📞 Phone:</span> <a href="tel:+260900000000" class="text-blue-600 hover:underline">+260 900 000 000</a></p>
+                <p class="flex items-center"><span class="font-semibold">📧 Email:</span> <a href="mailto:info@foodwebsite.com" class="text-blue-600 hover:underline">info@foodwebsite.com</a></p>
+                <p class="flex items-center"><span class="font-semibold">🕒 Hours:</span> Mon-Sat: 9 AM - 10 PM, Sun: 10 AM - 8 PM</p>
+              </div>
+      
+              <!-- Social Links -->
+              <div class="mt-6 flex space-x-4">
+                <a href="#" class="text-blue-500 hover:text-blue-700">🌍 Website</a>
+                <a href="#" class="text-blue-500 hover:text-blue-700">📷 Instagram</a>
+                <a href="#" class="text-blue-500 hover:text-blue-700">📘 Facebook</a>
+              </div>
+            </div>
+      
+            <!-- Contact Form -->
+            <div class="bg-slate-800 p-6 rounded-lg shadow-lg text-white">
+              <h3 class="text-xl font-semibold   mb-4">Send Us a Message</h3>
+              <form>
+                <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-lg mb-4">
+                <input type="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded-lg mb-4">
+                <textarea placeholder="Your Message" rows="4" class="w-full p-3 border border-gray-300 rounded-lg mb-4"></textarea>
+                <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">Send Message</button>
+              </form>
+            </div>
+          </div>
+      
+          <!-- Google Map -->
+          <div class="mt-8">
+            <iframe 
+              class="w-full h-64 rounded-lg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509514!2d144.953735315922!3d-37.81627937975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5778f9b0e6c582!2sRestaurant!5e0!3m2!1sen!2sus!4v1634194792997!5m2!1sen!2sus"
+              allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </section>
+      
+
+      <!-- 
+    - #FOOTER
+  -->
+
+       <!-- 
+    - #FOOTER
+  -->
+
+  
+
+<footer class="bg-white rounded-lg shadow-sm dark:bg-gray-900 ">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                <img src="/static/images/witty.png" class="h-8" alt="Witty Foods Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Witty Foods</span>
+            </a>
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">About</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#" class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+    </div>
+</footer>
+
+
+</article>
+</main>
+<script>
+  const menuButton = document.getElementById('menuButton');
+  const sideNav = document.getElementById('sideNav');
+  const closeButton = document.getElementById('closeButton');
+
+  menuButton.addEventListener('click', () => {
+      sideNav.classList.remove('-translate-x-full');
+  });
+
+  closeButton.addEventListener('click', () => {
+      sideNav.classList.add('-translate-x-full');
+  });
+</script>
+  <script src="/static/js/script.js"></script>
+  <!-- <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "pd923qg6l8");
+</script> -->
+
+</body>
+
+</html>
